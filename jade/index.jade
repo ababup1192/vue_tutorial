@@ -1,10 +1,14 @@
 doctype html
-html(lang="en")
-  head
-    title= vue_tutorial
-    script(src='lib/js/jquery/jquery.min.js')
-    script(src='lib/js/vue/vue.min.js')
-    script(src='js/vue_test.js')
-  body
-    #demo
-      h1 Hello, {{message}}
+html(lang="ja")
+	head
+		title vue_tutorial
+		meta(charset='utf-8')
+		script(src='lib/js/jquery/jquery.min.js')
+		script(src='lib/js/vue/vue.min.js')
+		script(src='js/vue_test.js')
+	body
+		#lists
+			select(v-model='selected')
+				option(v-repeat='lists')
+					{{$value}}
+			p {{selected}}

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
-    <title></title>
+    <title>vue_tutorial</title>
+    <meta charset="utf-8">
     <script src="lib/js/jquery/jquery.min.js"></script>
     <script src="lib/js/vue/vue.min.js"></script>
     <script src="js/vue_test.js"></script>
   </head>
   <body>
-    <div id="demo">
-      <h1>Hello, {{message}}</h1>
+    <div id="lists">
+      <select v-model="selected">
+        <option v-repeat="lists">{{$value}}</option>
+      </select>
+      <p>{{selected}}</p>
     </div>
   </body>
 </html>

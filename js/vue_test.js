@@ -1,9 +1,14 @@
 (function() {
+  var list_data;
+
+  list_data = ['かに', 'うに', 'いくら'];
+
   $(function() {
     return new Vue({
-      el: '#demo',
+      el: '#lists',
       data: {
-        message: 'vue.js!'
+        selected: list_data[0],
+        lists: list_data
       }
     });
   });
