@@ -1,18 +1,11 @@
 doctype html
 html(lang="en")
   head
-    title= index
-    script(src='lib/js/jqueryjquery.min.js')
-    script(src='js/test.js')
+    title= vue_tutorial
+    script(src='lib/js/jquery/jqueryjquery.min.js')
+    script(src='lib/js/vue/vue.min.js')
+    script(src='js/vue_test.js')
   body
-    h1 Jade - node template engine
-    #container.col
-      if youAreUsingJade
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        Jade is a terse and simple
-        templating language with a
-        strong focus on performance
-        and powerful features.
+    h1 vue - vue.js tutorial
+  #editor
+    textarea #v-model=inputx
