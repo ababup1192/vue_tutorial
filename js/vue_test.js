@@ -1,6 +1,11 @@
 (function() {
-  $.each([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], function(v) {
-    return console.log(v * v * v * v);
+  $(function() {
+    return new Vue({
+      el: '#demo',
+      data: {
+        message: 'vue.js!'
+      }
+    });
   });
 
 }).call(this);

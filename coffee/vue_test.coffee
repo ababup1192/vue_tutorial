@@ -1,2 +1,6 @@
-$.each [1..10], (v) ->
-	console.log v * v * v * v
+$ ->
+	new Vue
+		el: '#demo'
+		data:
+			message: 'vue.js!'
+
