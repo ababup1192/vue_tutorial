@@ -1,14 +1,19 @@
 (function() {
-  var list_data;
-
-  list_data = ['かに', 'うに', 'いくら'];
-
   $(function() {
-    return new Vue({
-      el: '#lists',
+    var demo;
+    return demo = new Vue({
+      el: '#demo',
       data: {
-        selected: list_data[0],
-        lists: list_data
+        title: 'todos',
+        todos: [
+          {
+            done: true,
+            content: 'Learn JavaScript'
+          }, {
+            done: false,
+            content: 'Learn vue.js'
+          }
+        ]
       }
     });
   });

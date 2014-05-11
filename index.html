@@ -3,16 +3,18 @@
   <head>
     <title>vue_tutorial</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- script load-->
     <script src="lib/js/jquery/jquery.min.js"></script>
     <script src="lib/js/vue/vue.min.js"></script>
     <script src="js/vue_test.js"></script>
   </head>
   <body>
-    <div id="lists">
-      <select v-model="selected">
-        <option v-repeat="lists">{{$value}}</option>
-      </select>
-      <p>{{selected}}</p>
+    <div id="demo">
+      <h1>{{title | uppercase}}</h1>
+      <ul>
+        <li v-repeat="todos" v-on="click: done = !done" class="{{done ? 'done' : ''}}">{{content}}</li>
+      </ul>
     </div>
   </body>
 </html>

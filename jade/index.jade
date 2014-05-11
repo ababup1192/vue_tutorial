@@ -3,12 +3,15 @@ html(lang="ja")
 	head
 		title vue_tutorial
 		meta(charset='utf-8')
+		link(rel='stylesheet' href='./css/style.css')
+		// script load
 		script(src='lib/js/jquery/jquery.min.js')
 		script(src='lib/js/vue/vue.min.js')
 		script(src='js/vue_test.js')
 	body
-		#lists
-			select(v-model='selected')
-				option(v-repeat='lists')
-					{{$value}}
-			p {{selected}}
+		#demo
+			h1 {{title | uppercase}}
+			ul
+				li(v-repeat="todos" v-on="click: done = !done"
+					class="{{done ? 'done' : ''}}")
+					{{content}}

@@ -1,12 +1,15 @@
-list_data = [
-	'かに'
-	'うに'
-	'いくら'
-]
-
 $ ->
-	new Vue
-		el: '#lists'
-		data:
-			selected: list_data[0]
-			lists: list_data
+	demo = new Vue
+			el: '#demo'
+			data:
+				title: 'todos'
+				todos: [
+							{
+								done: true
+								content: 'Learn JavaScript'
+							},
+							{
+								done: false
+								content: 'Learn vue.js'
+							}
+						]
